@@ -6,8 +6,8 @@ import * as Debug from "debug";
 import * as portfinder from "portfinder";
 
 export interface MongohatOption {
-  dbName: string;
-  dbPath: string;
+  dbName?: string;
+  dbPath?: string;
   dbPort?: number;
   useReplicaSet?: boolean;
   version?: string;
@@ -42,7 +42,7 @@ export class Mongohat {
    */
   constructor(contextName: string, option?: MongohatOption) {
     this.context = contextName;
-    this.defaultTempDir = `${__dirname}${this.dataDir}`;
+    this.defaultTempDir = `${__dirname}${this.dataDir}_${contextName}`;
     this.config = {
       dbName:
         this.context && this.context.trim().length > 0
@@ -229,7 +229,7 @@ export class Mongohat {
     return this.client.db(this.config.dbName).dropDatabase();
   }
 
-  private async dropDB() {
+  public async dropDB() {
     this.testData = {};
     const db = this.client.db(this.config.dbName);
     return db.collections().then((collections) => {

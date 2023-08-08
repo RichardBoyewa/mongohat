@@ -24,7 +24,7 @@ class Mongohat {
         this.dataDir = "/.Mongohat";
         this.defaultPort = 27777;
         this.context = contextName;
-        this.defaultTempDir = `${__dirname}${this.dataDir}`;
+        this.defaultTempDir = `${__dirname}${this.dataDir}_${contextName}`;
         this.config = {
             dbName: this.context && this.context.trim().length > 0
                 ? this.context

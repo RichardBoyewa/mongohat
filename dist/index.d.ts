@@ -1,8 +1,8 @@
 import { Collection, MongoClient } from "mongodb";
 import { MongoMemoryServer, MongoMemoryReplSet } from "mongodb-memory-server";
 export interface MongohatOption {
-    dbName: string;
-    dbPath: string;
+    dbName?: string;
+    dbPath?: string;
     dbPort?: number;
     useReplicaSet?: boolean;
     version?: string;
@@ -33,7 +33,7 @@ export declare class Mongohat {
     refresh(): Promise<import("mongodb").InsertManyResult<import("bson").Document>[]>;
     clean(data?: {}): Promise<(boolean | void)[]>;
     drop(): Promise<boolean>;
-    private dropDB;
+    dropDB(): Promise<(boolean | void)[]>;
     private delay;
     getDBUrl(): string;
     stop(): Promise<void>;

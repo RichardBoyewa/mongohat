@@ -1,3 +1,4 @@
 test.*
-dist/.mongot
+dist/.Mongohat
+dist/.Mongohat_*
 node_modules
