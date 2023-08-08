@@ -1,0 +1,3 @@
+test.*
+dist/.mongot
+node_modules

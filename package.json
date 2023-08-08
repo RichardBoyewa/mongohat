@@ -1,0 +1,32 @@
+{
+  "name": "mongohat",
+  "version": "1.0.0",
+  "description": "A mongo db unit testing library",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "tsc && tsc test.ts && node test"
+  },
+  "keywords": [
+    "MongoDB",
+    "unit",
+    "test"
+  ],
+  "author": "richardboyewa",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.4.8",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@types/ps-node": "^0.1.1",
+    "debug": "^4.3.4",
+    "mongodb": "^5.7.0",
+    "mongodb-memory-server": "^8.14.0",
+    "portfinder": "^1.0.32",
+    "ps-node": "^0.1.6"
+  }
+}
