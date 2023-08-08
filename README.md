@@ -14,8 +14,8 @@ a new one.
 Do not call this in a loop.
 ```js
 MongohatOption {
-  dbName: string;
-  dbPath: string;
+  dbName?: string;
+  dbPath?: string;
   dbPort?: number;
   useReplicaSet?: boolean;
   version?: string;
