@@ -1,9 +1,13 @@
 {
   "name": "mongohat",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A mongo db unit testing library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/RichardBoyewa/mongohat"
+  },
   "files": [
     "/dist"
   ],
